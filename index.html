@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Flutter Documentation</header>
+    <a href="#Introduction" class="nav-link">Introduction</a>
+    <a href="#Installation" class="nav-link">Installation</a>
+    <a href="#Widgets" class="nav-link">Widgets</a>
+    <a href="#State_Management" class="nav-link">State Management</a>
+    <a href="#Hello_World" class="nav-link">Hello World</a>
+  </nav>
+  <main id="main-doc">
+    <section id="Introduction" class="main-section">
+      <header>Introduction</header>
+      <p>Flutter is an open-source UI software development toolkit created by Google.</p>
+      <p>It is used to develop cross platform applications for Android, iOS, Linux, macOS, Windows, Google Fuchsia, and the web from a single codebase.</p>
+      <p>Flutter apps are written in the Dart language and make use of many of the language's more advanced features.</p>
+      <code>flutter create my_app</code>
+      <p>Flutter's engine, written primarily in C++, provides low-level rendering support using Google's Skia graphics library.</p>
+      <p>It also interfaces with platform-specific SDKs.</p>
+    </section>
+    <section id="Installation" class="main-section">
+      <header>Installation</header>
+      <p>To install Flutter, follow these steps:</p>
+      <ol>
+        <li>Download the Flutter SDK from the official website.</li>
+        <li>Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK.</li>
+        <li>Add the flutter tool to your path.</li>
+      </ol>
+      <code>$ git clone https://github.com/flutter/flutter.git -b stable</code>
+      <p>After installing Flutter, run the following command to see if there are any dependencies you need to install to complete the setup:</p>
+      <code>flutter doctor</code>
+      <p>This command checks your environment and displays a report of the status of your Flutter installation.</p>
+      <p>It checks for the presence of necessary dependencies and tools.</p>
+    </section>
+    <section id="Widgets" class="main-section">
+      <header>Widgets</header>
+      <p>Widgets are the basic building blocks of a Flutter app's user interface.</p>
+      <p>Each widget is an immutable declaration of part of the user interface.</p>
+      <p>Some common widgets include:</p>
+      <ul>
+        <li>Text</li>
+        <li>Row</li>
+        <li>Column</li>
+        <li>Container</li>
+      </ul>
+      <code>Text('Hello, World!')</code>
+      <p>Widgets form a hierarchy based on composition.</p>
+      <p>Each widget nests inside, and inherits properties from, its parent.</p>
+    </section>
+    <section id="State_Management" class="main-section">
+      <header>State Management</header>
+      <p>State management is a complex topic in Flutter.</p>
+      <p>There are several approaches to managing state in Flutter, including:</p>
+      <ul>
+        <li>setState</li>
+        <li>InheritedWidget</li>
+        <li>Provider</li>
+        <li>Bloc</li>
+      </ul>
+      <code>setState(() { _myState = newState; })</code>
+      <p>Each approach has its own advantages and trade-offs.</p>
+      <p>Choosing the right approach depends on the complexity and requirements of your app.</p>
+    </section>
+    <section id="Hello_World" class="main-section">
+      <header>Hello World</header>
+      <p>Here is a simple "Hello World" example in Flutter:</p>
+      <code>
+        import 'package:flutter/material.dart';
+
+        void main() => runApp(MyApp());
+
+        class MyApp extends StatelessWidget {
+          @override
+          Widget build(BuildContext context) {
+            return MaterialApp(
+              home: Scaffold(
+                appBar: AppBar(
+                  title: Text('Hello World'),
+                ),
+                body: Center(
+                  child: Text('Hello, world!'),
+                ),
+              ),
+            );
+          }
+        }
+      </code>
+      <p>This example creates a basic Flutter app with a single screen.</p>
+      <p>The screen contains an AppBar and a centered text widget.</p>
+      <p>Flutter's hot reload helps you quickly and easily experiment, build UIs, add features, and fix bugs faster.</p>
+    </section>
+  </main>
+</body>
+</html>
